@@ -1,25 +1,11 @@
-//check password and email
+//check passwords match
 
-function Verification() {
-    // Récupère la valeur email et password
-    var Email = document.getElementById('idEmail').value;
-    var idPassword = document.getElementById("idPassword").value;
-
-    // Contrôle sur l'email
-    if (Email == '') {
-        alert('Vous devez compléter votre adresse email');
-        document.getElementById('idEmail').style.backgroundColor = "red";
+function Validation() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("password").value;
+    if (password != confirmPassword) {
+        alert("Passwords do not match.");
         return false;
     }
-    else {
-        document.getElementById('idEmail').style.backgroundColor = "#9C6";
-    }
-
-    if (password == "") {
-        document.getElementById("idPassword").innerHTML = "Fill the password";
-        return false;
-    }
-    else {
-        document.getElementById('idPassword').style.backgroundColor = "#9C6";
-    }
+    return true;
 }
