@@ -2,8 +2,8 @@
 
 function Validation() {
     var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("password").value;
-    if (password != confirmPassword) {
+    var confirmpassword = document.getElementById("confirmpassword").value;
+    if (password != confirmpassword) {
         alert("Passwords do not match.");
         return false;
     }
