@@ -1,6 +1,6 @@
 //check passwords match
 
-function Validation() {
+function validationpassword() {
     var password = document.getElementById("password").value;
     var confirmpassword = document.getElementById("confirmpassword").value;
     if (password != confirmpassword) {
@@ -9,3 +9,15 @@ function Validation() {
     }
     return true;
 }
+
+function validate() {
+    if (document.form.value != "") {   
+        return true;
+    }
+    else {
+        alert("non validé");
+        return false;
+    }
+}
+
+
