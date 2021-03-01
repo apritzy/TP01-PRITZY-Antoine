@@ -1,23 +1,9 @@
-function validateEmail(email) {
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    return re.test(email);
-}
+//check password and email
 
 function Verification() {
-    // Récupére la valeur des champs nom et email
-    var Nom = document.getElementById('idNom').value;
+    // Récupére la valeur email
     var Email = document.getElementById('idEmail').value;
-    var Prenom = document.getElementById('idPrenom').value;
-
-    // Contrôle sur le nom
-    if (Nom == '') {
-        alert('Vous devez compléter votre nom !');
-        document.getElementById('idNom').style.backgroundColor = "red";
-        return false;    // Permet de bloquer l'envoi du formulaire
-    }
-    else {
-        document.getElementById('idNom').style.backgroundColor = "#9C6";
-    }
+    var password = document.getElementById("password").value;
 
     // Contrôle sur l'email
     if (Email == '') {
@@ -28,12 +14,12 @@ function Verification() {
     else {
         document.getElementById('idEmail').style.backgroundColor = "#9C6";
     }
-    if (Prenom == '') {
-        alert('Vous devez compléter votre Prénom !');
-        document.getElementById('idNom').style.backgroundColor = "red";
-        return false;    // Permet de bloquer l'envoi du formulaire
+
+    if (password == "") {
+        document.getElementById("password").innerHTML = "Fill the password";
+        return false;
     }
     else {
-        document.getElementById('idPrenom').style.backgroundColor = "#9C6";
+        document.getElementById('password').style.backgroundColor = "#9C6";
     }
 }
