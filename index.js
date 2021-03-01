@@ -1,9 +1,9 @@
 //check password and email
 
 function Verification() {
-    // Récupére la valeur email
+    // Récupère la valeur email et password
     var Email = document.getElementById('idEmail').value;
-    var password = document.getElementById("password").value;
+    var idPassword = document.getElementById("idPassword").value;
 
     // Contrôle sur l'email
     if (Email == '') {
@@ -16,10 +16,10 @@ function Verification() {
     }
 
     if (password == "") {
-        document.getElementById("password").innerHTML = "Fill the password";
+        document.getElementById("idPassword").innerHTML = "Fill the password";
         return false;
     }
     else {
-        document.getElementById('password').style.backgroundColor = "#9C6";
+        document.getElementById('idPassword').style.backgroundColor = "#9C6";
     }
 }
